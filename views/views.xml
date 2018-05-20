@@ -1,0 +1,40 @@
+<?xml version="1.0"?> 
+<odoo> 
+  <record id="view_form_citas" model="ir.ui.view"> 
+    <field name="name">Citas Form</field> 
+    <field name="model">sls.citassls</field> 
+    <field name="arch" type="xml"> 
+	 <form string="Citas"  create="false"> 
+	   <group>    
+	       <field name="autor"/>
+	       <field name="cita"/>
+	       <field name="fecha"/>
+	       <field name="orden" /> 
+	    </group> 
+	 </form>
+    </field> 
+  </record> 
+  <record id="view_tree_citas" model="ir.ui.view">
+    <field name="name">Citas Tree</field> 
+    <field name="model">sls.citassls</field> 
+    <field name="arch" type="xml"> 
+        <tree default_order="fecha asc,orden asc" create="false">
+            <field name="autor"/>
+            <field name="cita"/>
+            <field name="fecha"/>
+            <field name="orden" /> 
+	    <button name="eliminar" string="Eliminar" type="object" />
+        </tree>
+    </field>
+  </record>
+<record id="view_filter_todo_task" model="ir.ui.view">
+    <field name="name">Citas Filter</field>
+    <field name="model">sls.citassls</field> 
+    <field name="arch" type="xml"> 
+        <search>
+            <field name="autor"/>
+            <field name="fecha"/>
+        </search>
+    </field>
+</record>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?> 
+<odoo> 
+  <act_window 
+    id="action_citassls" 
+    name="citassls" 
+    res_model="sls.citassls" 
+    view_mode="form,tree" />
+  <act_window 
+    id="action2_citassls" 
+    name="citassls" 
+    res_model="sls.citassls" 
+    view_mode="tree,form" /> 
+  <menuitem id="menu_citassls" 
+    name="citassls"
+    action="action_citassls" /> 
+ <menuitem id="menu_nueva_citassls" 
+    name="Nueva cita"
+    action="action_citassls" 
+    parent="menu_citassls"/> 
+ <menuitem id="menu_lista_citassls" 
+    name="Listar citas"
+    action="action2_citassls" 
+    parent="menu_citassls"/> 
+</odoo> 
+
